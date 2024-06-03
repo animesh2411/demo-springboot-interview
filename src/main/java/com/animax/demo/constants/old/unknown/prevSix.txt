@@ -1,0 +1,46 @@
+GET endpoint to retrieve details of employees based on the city
+eg: if city is Delhi, then List<employees>
+
+Employee -> empId, name, lastName, address
+Address -> empId, city, country
+
+
+@RestController
+@RequestMapping("/v1/employee")
+public class EmployeeController {
+
+@Autowired
+EmployeeService empService;
+
+@GetMapping("/get/{cityName}")
+public List<Employee> getEmployeesByCityName(@RequestParam String cityName) throws EmployeeException {
+List<Employees> empList = new ArrayList<>();
+if(cityName!=null) {
+empList = empService.getEmployeesByCityName(cityName);
+return empList;
+}
+}
+}
+
+
+@Service
+public class EmployeeService {
+
+@Autowired EmployeeRepository empRepo;
+
+public List<Employee> getEmployeesByCityName(String cityName) {
+Optional<Employees> empOptional = new ArrayList<>();
+empOptional = empRepo.getEmployeeByCityName(cityName);
+if(empOptional.isPresent()) {
+return empOptional.get();
+} else {
+throw new EmployeeException("NOt found");
+}
+
+
+
+public class EmployeeRepository extends CrudRepository<Employee, String> {
+
+@Query(SELECT * FROM Employee emp LEFT INNER JOIN Address a where emp.empId = a.empId AND a.cityName = ${cityName})
+public List<Employee> getEmployeeByCityName(cityName);
+}

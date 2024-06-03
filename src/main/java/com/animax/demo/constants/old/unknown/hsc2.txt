@@ -1,0 +1,53 @@
+String str = "abcd";
+
+ab, ba
+
+ab and cd
+abc with d
+
+
+generate all possible unique permutations 
+abdc, badc, bacd, cadb,....
+
+char c[] = new char[str.length()];
+c = str.toCharArray();
+
+
+
+String sb = generate(c);
+
+List<String> list = new ArrayList<>();
+list.add(sb);
+
+
+
+
+public String generate(char c[]) {
+StringBuilder sb = new StringBuilder();
+for(int i=0;i<c.length;i++) {
+sb.append(str.charAt(i));
+}
+return sb.toString();
+}
+
+
+
+
+
+list1 = {1,3,9,5}
+list2 = {1,2,5,7,11,2}
+
+Output - 3,9,7,11,2
+
+
+snake ladder
+
+dice = 1 to 6
+Board = position from 1 to 100
+Players = postion
+snake = {i, j}, {i, j}....
+Ladder = {i, j}, {i, j}....
+
+
+
+

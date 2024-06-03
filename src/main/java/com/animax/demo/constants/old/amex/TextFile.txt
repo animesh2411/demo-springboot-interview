@@ -1,0 +1,4 @@
+SALES table -> prodId, prodPrice, categoryId, quantity
+group by category and find sum of prodPrice
+
+SELECT SUM(prodPrice), categoryId FROM SALES GROUP BY categoryId

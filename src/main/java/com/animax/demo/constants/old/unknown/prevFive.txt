@@ -1,0 +1,24 @@
+factory that provides singleton
+
+abstract
+
+Write a java function to take input as array of int values and return average
+
+Arrays.stream(nums)
+      .average()
+      .orElse(0);
+
+
+// Employee - id, name, salary
+6th highest
+
+
+100
+99
+88
+77
+66
+55
+
+
+select * from Employee where salary = (select min(salary) from Employee where salary in (SELECT DISTINCT TOP 6 salary from Employee order by salary desc))

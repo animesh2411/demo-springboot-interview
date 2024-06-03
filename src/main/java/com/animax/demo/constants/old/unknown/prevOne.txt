@@ -1,0 +1,66 @@
+interface interfaceA {
+
+interfaceMethod();
+
+
+
+ClassA implements interfaceA {
+
+
+
+methodA(String a) {
+}
+
+methodA(StringBuffer a) {
+}
+
+
+@Override
+public void
+
+
+
+(System.out::println)
+
+
+int s = (a,b) -> a+b;
+
+
+
+HashMap<Employee, value>
+
+
+
+select * from employee where sal = (select min(sal) from employee where sal in (select distinct TOP 3 sal from employee order by desc))
+
+
+8000
+6000
+5000
+
+
+arrya [0,1,0,0,1]
+
+0,0,0,1,1
+
+122334455
+result;
+
+hasMap.entrySet =
+entry.getKey()
+entrySet.getValue
+
+
+List<String> str = {"words", "word2", "kites"}
+
+str.stream.filter(p-> p.length() <6 && p.startsWith('k')).collect(Collectors.toList());
+
+
+
+
+for (int i=0; i< arrya.length;
+
+
+
+
+

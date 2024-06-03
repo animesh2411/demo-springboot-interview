@@ -1,0 +1,47 @@
+List<Employees>
+
+unique departments
+
+EMP, Depart
+
+
+HashSet<String> setDepartments = empList.stream().map(emp -> emp.getDepartments).collect(Collectors.toSet());
+
+
+Comparator.compare(name, nextName)
+
+Comparator  implements Comparable
+
+compare(String name, String nextName) {
+
+}
+
+6-> 1,2,3
+
+28-> 1,2,4,7,14
+
+96
+
+List<Integer> findDivisor(int num) {
+List<Integer> divisors = new ArrayList<>();
+for(int i = 0; i< num; i++) {
+if (num%i==0) {
+divisors.add(i);
+}
+return divisors;
+}
+
+public static void main(String args[]) {
+
+List<Integer> divisors = findDivisor(int num);
+//add divisors and check whether equals to num
+
+
+3rd highest salary
+
+
+select * from EMP where salary = (select min(salary) from EMP where salary IN (select distinct TOP 3 salary from EMP order by salary ascending))
+
+5000
+4000
+3000

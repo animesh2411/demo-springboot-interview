@@ -1,0 +1,32 @@
+10 9 8 7
+6 5 4
+3 2
+1
+
+
+void printPattern(int n) {
+for (int i = n; < n/2; n--) {
+for (int j =
+
+
+Employee (String name, long id, Date dob)
+
+List<Employee> list = new ArrayList<>();
+
+list.sort(dob);
+
+list.stream().
+
+Employee implements Comparator {
+list.
+
+
+DAO Error
+throws Exception
+
+0/0
+
+
+Set
+
+

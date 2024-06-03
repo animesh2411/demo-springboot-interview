@@ -1,0 +1,74 @@
+Define connection pool with 2 methods acquire and release
+pool can allocate maximum of 5 connections at a time and acquire method should be blocked until someone releases the connection
+
+class connectionPool{
+
+List<Connection> list= null;
+static init(){
+initialize list with connections
+Connection conn;
+}
+    public Connection synchronized acquire(){
+        if(list.isEmpty()) {
+        //waiting
+        Thread.sleep(10);
+
+        acquire();
+        } else {
+
+        }
+    }
+     public void release(Connection con){
+     }
+}
+
+
+To ensure thread safety in a multithreaded environment, we can use synchronization to protect access to the connection pool. Here's the modified version of the ConnectionPool class with thread-safe acquire() and release() methods:
+Explanation: code in another file
+
+Both the acquire() and release() methods are synchronized, ensuring that only one thread can access the pool at a time.
+In the acquire() method, if the pool is empty, the thread waits until a connection becomes available. When a connection is acquired, it notifies all waiting threads.
+In the release() method, if the pool is full, the thread waits until there is space in the pool. When a connection is released, it notifies all waiting threads.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+//table employee (id,name,mgr_id) -->mgr_id refers to id of same table
+//employee name,manger name --  if employee doesn't have manger we still need his name with mgr name as blank
+
+1, Animesh, 2
+2, Ankur, null
+
+Animesh Ankur
+Ankur null
+
+SELECT name, managerId from employee GROUP BY name HAVING mgr_id=id OR mgr_id=null
+
+where mgr_id IS null OR mgr_id=id
+
+
+
+Correct answer:
+use a LEFT JOIN with the same table to retrieve the employee names along with their manager names
+(or a blank if the employee doesn't have a manager).
+
+SELECT e1.name AS employee_name, COALESCE(e2.name, '') AS manager_name
+FROM employee e1
+LEFT JOIN employee e2 ON e1.mgr_id = e2.id;
+Explanation:
+
+We select the name of the employee (e1.name) and the name of their manager (e2.name). If an employee doesn't have a manager, e2.name will be NULL. We use the COALESCE function to replace NULL with an empty string, giving a blank manager name for employees without a manager.
+The LEFT JOIN ensures that all rows from the left table (employee e1) are included in the result, even if there is no matching row in the right table (employee e2). This allows us to retrieve all employees along with their manager names (or blank manager names if they don't have a manager).
+
+
+
+
+
+
+
+
+
+
+
+
+
+

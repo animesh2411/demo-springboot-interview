@@ -1,0 +1,22 @@
+employee, salary
+4th highest
+
+
+select min(salary) from employee where salary in (SELECT TOP 4 salary from employee order by salary desc)
+
+
+Employee Department
+
+one employee can work on multiple department
+
+@Entity
+
+empId, deptId --- deptId department table
+
+@OneToMany
+List<String> deptIdList;
+
+
+
+
+

@@ -1,0 +1,95 @@
+
+input 2 = 4+1
+
+list = 1,2,3,4,5
+first odd num
+
+output = 2,5,10, 17, 26
+
+interface CustomInterface {
+
+int inputSqaurePlusOne(int n);
+}
+
+
+
+public class MyClass {
+
+List<Integers> list = new ArrayList<>();
+
+
+list.stream().map(n -> n*n+1).collect(Collectors.toList());
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+Name, id
+
+Emp1
+Animesh, 1
+
+Emp2
+Animesh, 1
+
+emp1 == emp2 -false
+
+emp1.equals(emp2)  -true
+
+
+SELECt * from table1 T1 INNER JOIN table2 T2 ON T1.ID = T2.ID
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+class A
+
+{
+
+ void run() throws exception()
+
+}
+
+
+class B extends A{
+
+void run()
+
+}
+
+B obj = new A();
+
+-----------------
+
+
+   static int except()
+
+    {
+
+        try
+
+        {
+
+            int a = 10%0;
+
+            return 1;
+
+        }
+
+        catch(Exception e)
+
+        {
+
+            return 2;
+
+        }
+
+        finally {
+
+            return 3;
+
+        }
+
+    }
